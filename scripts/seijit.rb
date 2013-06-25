@@ -8,7 +8,7 @@ require "datahub/plugins/speakerdeck"
 
 bot = DataHub::Bot.new do
   configure do |c|
-    c.user_agent = "user.agent"
+#    c.user_agent = "user.agent"
     c.plugins = [
                  DataHub::Plugins::Speakerdeck
                 ]

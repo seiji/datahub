@@ -23,7 +23,7 @@ module DataHub
     def start
       @plugins.register_plugins(@config.plugins)
       @plugins.each do |plugin|
-        plugin.execute()
+        plugin.request nil
       end
     end
   end

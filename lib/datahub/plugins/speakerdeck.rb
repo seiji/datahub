@@ -4,8 +4,12 @@ module DataHub::Plugins
   class Speakerdeck
     include DataHub::Plugin::Scrap
 
-    def execute(m)
-      puts "execute"
+    def urls
+      ["http://blog.seiji.me"]
+    end
+    
+    def execute(storage, response)
+      p response
     end
     
   end

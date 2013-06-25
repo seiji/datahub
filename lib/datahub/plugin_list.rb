@@ -7,7 +7,7 @@ module DataHub
     end
 
     def register_plugin(plugin)
-      puts plugin
+
       self << plugin.new(@bot)
     end
 

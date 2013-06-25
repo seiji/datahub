@@ -4,7 +4,5 @@ module DataHub
     def initialize
       super
     end
-
-    
   end
 end
