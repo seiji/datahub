@@ -35,7 +35,7 @@ module DataHub
     def start
       @plugins.register_plugins(@config.plugins)
       @plugins.each do |plugin|
-        collection_name = plugin.class.to_s.sub(/^DataHub::Plugins::/, "").split("::").map{|n| n.downcase }.join("_")
+        collection_name = plugin.coll_name || plugin.class.to_s.sub(/^DataHub::Plugins::/, "").split("::").map{|n| n.downcase }.join("_")
         coll = @mongo_db[collection_name]
         plugin.request coll
       end

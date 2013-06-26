@@ -2,6 +2,7 @@ require "datahub/helpers"
 require "curb"
 require "nokogiri"
 require "mechanize"
+
 module DataHub
   include Helpers
 
