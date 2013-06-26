@@ -19,7 +19,6 @@ module DataHub
       module InstanceMethods
         def initialize(bot)
           @bot = bot
-
           ::Twitter.configure do |config|
             config.consumer_key       = TWITTER_CONFIG['consumer_key']
             config.consumer_secret    = TWITTER_CONFIG['consumer_secret'] 
@@ -31,6 +30,8 @@ module DataHub
         def request(coll)
           execute coll
         end
+
+        def coll_name ; end
       end
     end
   end
