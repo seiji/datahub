@@ -21,7 +21,7 @@ module DataHub
           @bot = bot
         end
 
-        def request(storage)
+        def request(coll)
           urls.each do |url|
             c = Curl::Easy.new(url) do |curl|
               if @bot.config.user_agent
@@ -33,7 +33,7 @@ module DataHub
             end
             c.perform
             html_doc = Nokogiri::HTML(c.body_str.to_s)
-            execute storage, html_doc
+            execute coll, url, html_doc
           end
         end
 

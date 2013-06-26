@@ -8,9 +8,9 @@ module DataHub::Plugins
       ["http://blog.seiji.me"]
     end
     
-    def execute(storage, response)
-      p response
+    def execute(coll, url, response)
+      coll.insert({'a' => url})
+      
     end
-    
   end
 end

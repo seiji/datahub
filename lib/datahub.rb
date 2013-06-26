@@ -1,2 +1,16 @@
 require 'datahub/version'
-require 'datahub/bot'
+
+module DataHub
+  def self.root
+    File.expand_path '../..', __FILE__
+  end
+
+  def self.bin
+    File.join root, 'bin'
+  end
+
+  def self.lib
+    File.join root, 'lib'
+  end
+end
+
