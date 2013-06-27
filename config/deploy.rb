@@ -22,7 +22,7 @@ set :branch, "master"
 
 # strategy
 set :deploy_via, :remote_cache
-set :git_enable_submodules, 1
+set :deploy_to, "/srv/#{application}"
 set :current_path, "#{deploy_to}/current"
 set :shared_path, "#{deploy_to}/shared"
 set :normalize_asset_timestamps, false
