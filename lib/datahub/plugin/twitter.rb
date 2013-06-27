@@ -5,7 +5,7 @@ module DataHub
   include Helpers
   module Plugin
     module Twitter
-      TWITTER_YAML = File.join(DataHub.root, '..', 'private', 'config',  'twitter.yml')
+      TWITTER_YAML = File.join(DataHub.root, 'private', 'config',  'twitter.yml')
       TWITTER_CONFIG = YAML.load_file(TWITTER_YAML)["production"]
 
       def self.included(klass)
