@@ -1,3 +1,4 @@
+env :PATH, ENV['PATH']
 set :environment, :production
 
 LOG_FOLDER="/srv/datahub/shared/log"
