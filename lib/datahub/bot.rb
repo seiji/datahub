@@ -28,7 +28,7 @@ module DataHub
       when :mongo
         mongo_conn = MongoClient.new("localhost", 27017)
         @mongo_connection = mongo_conn 
-        @mongo_db = mongo_conn.db('data')
+        @mongo_db = mongo_conn.db('datahub')
       end
     end
 

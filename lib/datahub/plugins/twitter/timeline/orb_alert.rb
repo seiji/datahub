@@ -11,7 +11,7 @@ module DataHub::Plugins
         def execute(coll)
           ::Twitter.user_timeline(SCREEN_NAME).each do |timeline|
             id = timeline[:id]
-            unless coll.find('_id' => id)
+            if coll.find('_id' => id).count == 0
               coll.insert({_id: id})
               DataHub::Helpers::write_pubsub_message("bami2", "#{timeline[:created_at]} [#{SCREEN_NAME}] #{timeline[:text]}")
             end

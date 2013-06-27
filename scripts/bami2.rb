@@ -1,4 +1,3 @@
-#! ruby
 require 'bundler'
 Bundler.require(:default)
 $:.unshift 'lib'
