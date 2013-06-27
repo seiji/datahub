@@ -7,6 +7,6 @@ $:.unshift 'lib'
 Dir.glob('lib/tasks/**/*.rake').each { |r| load r }
 
 desc "run script"
-task :run, [:name] do |t|
-  %x(bundle exec ruby scripts/#{:name}.rb)
+task :run, [:name] do |t, args|
+  %x(bundle exec ruby scripts/#{args[:name]}.rb)
 end
