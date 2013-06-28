@@ -4,10 +4,10 @@ require "twitter"
 module DataHub::Plugins
   module Twitter
     module Timeline
-      class OrbAlert
+      class Egashura250
         include DataHub::Plugin::Twitter
 
-        SCREEN_NAME = "orb_alert"
+        SCREEN_NAME = "egashura_250"
 
         def coll_name
           "twitter_bot"
