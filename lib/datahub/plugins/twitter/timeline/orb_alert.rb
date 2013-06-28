@@ -18,7 +18,7 @@ module DataHub::Plugins
             id = timeline[:id]
             if coll.find('_id' => id).count == 0
               coll.insert({_id: id})
-              DataHub::Helpers::write_pubsub_message("bami2", "#{timeline[:created_at]} [#{SCREEN_NAME}] #{timeline[:text]}")
+              DataHub::Helpers::write_pubsub_message("bami2", "[#{SCREEN_NAME}] #{timeline[:text]}")
             end
           end
         end
