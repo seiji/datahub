@@ -14,7 +14,7 @@ bot = DataHub::Bot.new do
     c.attributes = {
       "DataHub::Plugins::Twitter::Timeline" => {
         screen_names: %w(ios_dev_bot),
-        pubsub_to: seijit"
+        pubsub_to: "seijit"
       }
     }
   end
