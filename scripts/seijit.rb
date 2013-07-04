@@ -13,8 +13,8 @@ bot = DataHub::Bot.new do
                 ]
     c.attributes = {
       "DataHub::Plugins::Twitter::Timeline" => {
-        screen_names: %w(orb_alert),
-        pubsub_to: "bami2"
+        screen_names: %w(ios_dev_bot),
+        pubsub_to: seijit"
       }
     }
   end

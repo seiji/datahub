@@ -14,10 +14,6 @@ module DataHub
     attr_accessor :config
     attr_accessor :plugins
 
-    def configure
-      yield @config
-    end
-
     def initialize(&b)
       @config = DataHub::Config.new
       @plugins = DataHub::PluginList.new(self)
@@ -32,8 +28,12 @@ module DataHub
       end
     end
 
+    def configure
+      yield @config
+    end
+
     def start
-      @plugins.register_plugins(@config.plugins)
+      @plugins.register_plugins(@config.plugins, @config.attributes)
       @plugins.each do |plugin|
         collection_name = plugin.coll_name || plugin.class.to_s.sub(/^DataHub::Plugins::/, "").split("::").map{|n| n.downcase }.join("_")
         coll = @mongo_db[collection_name]

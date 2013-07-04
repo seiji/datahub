@@ -14,12 +14,12 @@ module DataHub
       end
 
       module ClassMethods  
-        
       end
 
       module InstanceMethods
         def initialize(bot)
           @bot = bot
+          @attributes = attributes
         end
 
         def request(coll)
