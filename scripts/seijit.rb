@@ -19,7 +19,8 @@ bot = DataHub::Bot.new do
         pubsub_to: "seijit"
       },
       "DataHub::Plugins::Twitter::Tag" => {
-        names: %w(#30T)
+        names: %w(#30T),
+        pubsub_to: "seijit"
       }
     }
   end
