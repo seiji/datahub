@@ -10,7 +10,7 @@ bot = DataHub::Bot.new do
   configure do |c|
     c.data_source = :mongo
     c.plugins = [
-                 DataHub::Plugins::Twitter::Tag,
+#                 DataHub::Plugins::Twitter::Tag,
                  DataHub::Plugins::Twitter::Timeline
                 ]
     c.attributes = {
