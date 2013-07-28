@@ -1,2 +1,3 @@
 .bundle/bin
 .bundle/gems
+spec/vcr
