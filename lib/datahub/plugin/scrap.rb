@@ -66,9 +66,17 @@ module DataHub
           }
         end
 
-        def dropbox_add(file, path)
-          response = @dropbox.put_file(path, open(file))
+        def dropbox_add(file, path, overwrite = false)
+          response = @dropbox.put_file(path, open(file), overwrite)
           puts response.inspect
+        end
+
+        def dropbox_download(path)
+          begin
+            @dropbox.get_file_and_metadata(path)
+          rescue
+            [nil, nil]
+          end
         end
 
         def dropbox_metadata(path)
@@ -78,6 +86,7 @@ module DataHub
             nil
           end
         end
+
       end
     end
   end
