@@ -13,7 +13,7 @@ bot = DataHub::Bot.new do
     c.plugins = [
                  # DataHub::Plugins::Twitter::Tag,
                  # DataHub::Plugins::Twitter::Timeline,
-                 DataHub::Plugins::SpeakerDeck
+                 #DataHub::Plugins::SpeakerDeck
                 ]
     c.attributes = {
       "DataHub::Plugins::Twitter::Timeline" => {
@@ -26,7 +26,7 @@ bot = DataHub::Bot.new do
       },
       "DataHub::Plugins::SpeakerDeck" => {
         pubsub_to: "seijit",
-        urls: %w(https://speakerdeck.com/p/all)
+        urls: %w( https://speakerdeck.com/p/all https://speakerdeck.com/p/featured )
       }
     }
   end
